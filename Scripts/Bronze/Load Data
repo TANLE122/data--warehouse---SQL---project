@@ -1,1 +1,58 @@
+/* Du lieu được load từ file csv vào vào các bảng tương ứng được tạo trong csdl
+  - Bắt đầu lấy dữ liệu từ dòng 2
+  - Khi load thì bảng bị khóa 
+Waring: 
+  - Khi chạy code các bảng sẽ được xóa hết dữ liệu  
+  - Dữ liệu được load vào bảng 
+*/
+USE Datawarehouse;
+GO
+TRUNCATE TABLE bronze.crm_cus_info
+BULK INSERT bronze.crm_cus_info 
+FROM 'C:\Users\LE TRONG TAN\Downloads\datasets\source_crm\cust_info.csv'
+WITH (
+	FIRSTROW = 2,
+	FIELDTERMINATOR = ',',
+	TABLOCK
+	);
+TRUNCATE TABLE bronze.crm_prd_id;
+BULK INSERT bronze.crm_prd_id 
+FROM 'C:\Users\LE TRONG TAN\Downloads\datasets\source_crm\prd_info.csv'
+WITH(
+  FIRSTROW = 2,
+	FIELDTERMINATOR = ',',
+	TABLOCK
+	);
+TRUNCATE TABLE bronze.crm_sales_details;
+BULK INSERT bronze.crm_sales_details
+FROM 'C:\Users\LE TRONG TAN\Downloads\datasets\source_crm\sales_details.csv'
+WITH(
+	FIRSTROW = 2,
+	FIELDTERMINATOR = ',',
+	TABLOCK
+	);
+TRUNCATE TABLE bronze.erp_cust_az12;
+BULK INSERT bronze.erp_cust_az12
+FROM 'C:\Users\LE TRONG TAN\Downloads\datasets\source_erp\CUST_AZ12.csv'
+WITH(
+	FIRSTROW = 2,
+	FIELDTERMINATOR = ',',
+	TABLOCK 
+	);
+TRUNCATE TABLE bronze.erp_loc_a101;
+BULK INSERT bronze.erp_loc_a101
+FROM 'C:\Users\LE TRONG TAN\Downloads\datasets\source_erp\LOC_A101.csv'
+WITH(
+	FIRSTROW = 2,
+	FIELDTERMINATOR = ',',
+	TABLOCK 
+	);
+TRUNCATE TABLE bronze.erp_px_cat_g1v2
+BULK INSERT bronze.erp_px_cat_g1v2
+FROM 'C:\Users\LE TRONG TAN\Downloads\datasets\source_erp\PX_CAT_G1V2.csv'
+WITH(
+	FIRSTROW = 2,
+	FIELDTERMINATOR = ',',
+	TABLOCK 
+	);
 
