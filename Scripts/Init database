@@ -1,1 +1,25 @@
+/* 
+Khoi tao database có ten la Datawarehouse .Nếu nó đã tồn tại xóa và tạo lại
+Khoi tạo cáo lược đồ bronze , silver ,gold
+
+warning :
+Khi chạy nó sẽ xóa tất cả dữ liệu trong database 'Datawarehouse' và tạo lại csdl 'Datawarehouse'
+*/
+
+USE master;
+GO 
+
+IF EXISTS (SELECT 1 FROM sys.databases Where name = 'Datawarehouse' ) 
+BEGIN
+	ALTER DATABASE Datawarehouse SET SINGLE_USER ROLLBACK IMMEDIATE;
+	DROP DATABASE Datawarehouse;
+END;
+CREATE DATABASE Datawarehouse;
+go 
+CREATE SCHEMA bronze;
+go 
+CREATE SCHEMA silve;
+GO 
+CREATE SCHEMA gold; 
+GO 
 
