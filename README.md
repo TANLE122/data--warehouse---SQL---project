@@ -9,7 +9,7 @@ Lớp Bronze: Lưu trữ dữ liệu thô nguyên bản từ hệ thống nguồ
 Lớp Silver: Bao gồm các bước làm sạch, chuẩn hóa và biến đổi dữ liệu để sẵn sàng cho phân tích.
 
 Lớp Gold: Chứa dữ liệu đã được xử lý, sẵn sàng sử dụng trong kinh doanh và được mô hình hóa theo dạng star schema phục vụ cho báo cáo và phân tích.
-##📖 Tổng Quan Dự Án
+## Tổng Quan Dự Án
 Dự án này bao gồm:
 
 Kiến trúc Dữ liệu: Thiết kế kho dữ liệu hiện đại theo kiến trúc Medallion với các lớp Bronze, Silver, và Gold.
@@ -20,7 +20,7 @@ Mô hình hóa Dữ liệu: Phát triển các bảng fact và dimension đượ
 
 Phân tích & Báo cáo: Tạo báo cáo và dashboard dựa trên SQL để đưa ra thông tin có thể hành động.
 
-##🚀 Yêu Cầu Dự Án
+## Yêu Cầu Dự Án
 Xây Dựng Kho Dữ Liệu (Kỹ Thuật Dữ Liệu)
 Mục Tiêu
 Phát triển một kho dữ liệu hiện đại sử dụng SQL Server để tập hợp dữ liệu bán hàng, phục vụ cho phân tích và ra quyết định.
@@ -36,7 +36,7 @@ Phạm Vi: Tập trung vào tập dữ liệu mới nhất; không yêu cầu l�
 
 Tài Liệu: Cung cấp tài liệu rõ ràng về mô hình dữ liệu cho cả người dùng doanh nghiệp và nhóm phân tích.
 
-##BI: Phân Tích & Báo Cáo (Phân Tích Dữ Liệu)
+## BI: Phân Tích & Báo Cáo (Phân Tích Dữ Liệu)
 Mục Tiêu
 Xây dựng các truy vấn SQL để cung cấp thông tin chi tiết về:
 
